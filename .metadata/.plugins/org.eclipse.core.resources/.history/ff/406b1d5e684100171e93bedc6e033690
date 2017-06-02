@@ -1,0 +1,72 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Header </title>
+</head>
+    <style type="text/css">
+    
+    
+    
+    
+    html, body {
+    	margin: 0px;
+    	background: #ebebeb;
+    }
+      .ulTag {
+      	list-style-type: none;
+      	background: #0E283C;
+      	margin: 0px;
+      }
+      
+      
+      .liTag {
+        display: inline-block;
+            padding: 15px 25px;
+            background: grey;
+            border-radius: 5px;
+            margin: 10px 0px 10px 0px;
+            text-align: right;
+        } 
+        .sbmtBtn {
+        	width: 90px;
+		    height: 35px;
+		    border-radius: 10px;
+		    font-size: 17px;
+		    margin-top: 20px;
+}
+        }
+        
+</style>
+  
+<body>
+
+
+	<div class="ulTag">
+	<ul>
+		<li class="liTag"> <a href="../jsp/employees.jsp" style="color:black;">Employees</a></li>		
+		<li class="liTag"><a href="../jsp/departments.jsp" style="color:black;">Departments</a></li>
+		<li class="liTag"><a href="../jsp/user.jsp" style="color:black;">Users</a></li>
+		<li class="liTag"><a href="welcomePage.html" style="color:black;">Login</a></li>
+	</ul>
+	</div>
+	
+	<br>
+	
+	<div>
+	<div id="clouds">
+	<div class="cloud x1"></div>
+	<!-- Time for multiple clouds to dance around -->
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+</div>
+	
+
+
+
+</body>
+</html>

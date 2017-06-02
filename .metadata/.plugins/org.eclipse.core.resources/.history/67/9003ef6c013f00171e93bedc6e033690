@@ -1,0 +1,84 @@
+package com.samson.sakilaproject.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import com.samson.sakilaproject.bo.ActorFilmsBo;
+import com.samson.sakilaproject.bo.FilmBo;
+import com.samson.sakilaproject.dao.FilmActorDao;
+import com.samson.sakilaproject.dao.FilmDao;
+import com.samson.sakilaproject.dbo.FilmActorDbo;
+import com.samson.sakilaproject.dbo.FilmDbo;
+
+public class ActorFilmService {
+	
+	public List<ActorFilmsBo> findAll() {
+		List<ActorFilmsBo> returnList = new ArrayList<ActorFilmsBo>();
+		Map<Integer,List<Integer>> actorFilmMap = actorMap();
+		int actorId = 0;
+		ActorFilmsBo actorFilmBo = null; 
+		List<Integer> filmList;
+		Iterator<Integer> iter = actorFilmMap.keySet().iterator();
+		while(iter.hasNext()){
+			actorFilmBo = new ActorFilmsBo();
+			actorId=iter.next();
+			filmList = actorFilmMap.get(actorId);
+			actorFilmBo.setFilmList(findFilmInfo(filmList));
+			returnList.add(actorFilmBo);
+		}
+		return returnList;
+	}
+ 
+	public Map<Integer,List<Integer>>  actorMap(){
+		Map<Integer,List<Integer>> actorFilmMap = new HashMap<Integer,List<Integer>>();
+		FilmActorDao filmActorDao = new FilmActorDao();
+		List<FilmActorDbo> filmActorDbo =filmActorDao.findAll();
+		List<Integer> filmList;
+		for(FilmActorDbo dbo :filmActorDbo){
+			if(actorFilmMap.containsKey(dbo.getActor_id())){
+				filmList = actorFilmMap.get(dbo.getActor_id());
+			}
+			else{
+				filmList = new ArrayList<Integer>();
+			}
+		filmList.add(dbo.getFilm_id());
+		actorFilmMap.put(dbo.getActor_id(), filmList);
+		}
+		System.out.println(actorFilmMap);
+		return actorFilmMap;		
+	}
+	
+	public static void main(String[] args) {
+		ActorFilmService actorFilmService = new ActorFilmService();
+		actorFilmService.actorMap();
+	}
+
+	public	List<FilmBo> findFilmInfo(List<Integer> actorList){
+			List<FilmBo> returnList = new ArrayList<FilmBo>();
+			FilmBo bo = null;
+			FilmDao filmDao = new FilmDao();
+			FilmDbo dbo = null;
+			for(Integer filmId : actorList){
+				dbo = filmDao.findById(filmId);
+				bo = new FilmBo();
+				bo.setFilmId(dbo.getFilmId());
+				bo.setTitle(dbo.getTitle());
+				bo.setDescription(dbo.getDescription());
+				returnList.add(bo);
+				
+				
+			}
+			
+			return returnList;
+			
+		}
+	
+		private String getTitle(int id) {
+			FilmDao fdao = new FilmDao();
+			FilmDbo dbo = fdao.findById(id);
+			return dbo.getTitle();
+		}
+}

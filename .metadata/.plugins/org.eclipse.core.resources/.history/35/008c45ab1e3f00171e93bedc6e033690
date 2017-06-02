@@ -1,0 +1,38 @@
+package com.samson.sakilaproject.bo;
+
+
+import java.util.List;
+
+public class FilmActorBo  {
+	
+	
+	int filmId;
+	String title;
+	List<ActorBo> actorList;
+	
+	public int getFilmId() {
+		return filmId;
+	}
+	public void setFilmId(int filmId) {
+		this.filmId = filmId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public List<ActorBo> getActorList() {
+		return actorList;
+	}
+	public void setActorList(List<ActorBo> actorList) {
+		this.actorList = actorList;
+	}
+	@Override
+	public String toString() {
+		return "FilmActorBo [filmId=" + filmId + ", title=" + title + ", actorList=" + actorList + "]";
+	}
+	
+		
+
+}

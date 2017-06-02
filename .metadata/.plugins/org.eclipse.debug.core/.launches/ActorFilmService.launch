@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/SakilaProject/src/com/samson/sakilaproject/service/ActorFilmService.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.samson.sakilaproject.service.ActorFilmService"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SakilaProject"/>
+</launchConfiguration>

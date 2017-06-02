@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Client Side Validation</title>
+    <style type="text/css">
+    html, body {
+    	margin: 0px;
+    	background: #ebebeb;
+    }
+      .ulTag {
+      	list-style-type: none;
+      	background: #0E283C;
+      	margin: 0px;
+      }
+      
+      
+      .liTag {
+        display: inline-block;
+            padding: 15px 25px;
+            background: grey;
+            border-radius: 5px;
+            margin: 10px 0px 10px 0px;
+            text-align: right;
+        } 
+        .sbmtBtn {
+        	width: 90px;
+		    height: 35px;
+		    border-radius: 10px;
+		    font-size: 17px;
+		    margin-top: 20px;
+}
+        }
+    </style>
+   
+</head>
+<body>
+	<div class="ulTag">
+	<ul>
+		<li class="liTag"> <a href="user-data-js.jsp" style="color:black;">Employee</a></li>
+		
+		<li class="liTag"><a href="#" style="color:black;">Department</a></li>
+		<li class="liTag"><a href="#" style="color:black;">Users</a></li>
+		<li class="liTag"><a href="employees.jsp" style="color:black;">Login</a></li>
+	</ul>
+	</div>
+
+
+
+<br>
+
+
+
+ 			
+
+
+
+<form name="link" action = "../jsp/employees.jsp">
+	<input type="submit" value="Go to google"/>
+
+</form>
+
+
+</body>
+</html>

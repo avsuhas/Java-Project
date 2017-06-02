@@ -1,0 +1,29 @@
+<%@ page import="com.samson.service.IServiceEmployees" %>
+<%@ page import="com.samson.service.ServiceEmployees" %>
+<%@ page import="com.samson.bo.EmployeesBo" %>
+
+<%@page import="java.util.List"%>
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%
+List<EmployeesBo> employeesList = new ArrayList<EmployeesBo>();
+IServiceEmployees service = new ServiceEmployees();
+employeesList = service.findAll();
+%>
+<% 
+for(EmplyeesBo bo:list){%>
+<%= %>
+
+<%= list %>
+</body>
+</html>

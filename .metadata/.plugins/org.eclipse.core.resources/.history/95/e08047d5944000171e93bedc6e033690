@@ -1,0 +1,72 @@
+<%@ page import="com.samson.service.IServiceEmployees" %>
+<%@ page import="com.samson.service.ServiceEmployees" %>
+<%@ page import="com.samson.bo.EmployeeInfoBo" %>
+<%@ page import="com.samson.bo.EmployeesBo" %>
+
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<body>
+
+
+<%
+List<EmployeeInfoBo> list = new ArrayList<EmployeeInfoBo>();
+ServiceEmployees service = new ServiceEmployees();
+list = service.findAllInfo();
+
+%>
+
+<table style="border: 1px solid;">
+<tr>
+<th>Emp_No.</th>
+<th>Dept</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Salary</th>
+<th>Title</th>
+</tr>
+
+<% 
+for(EmployeeInfoBo bo: list){%>
+	<tr>
+		
+		<td> <%=bo.getEmpNo()  %> </td>
+		<td><%=bo.getDepartment()  %></td>
+		<td><%=bo.getFirstName() %></td>
+		<td><%=bo.getLastName() %></td>
+		<td><%=bo.getSalary()  %></td>
+		<td><%=bo.getTitle() %></td>
+	</tr>
+		<%} %>
+		
+</table>
+		
+		
+</body>
+</html>

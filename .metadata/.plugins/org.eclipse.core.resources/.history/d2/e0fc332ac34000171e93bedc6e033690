@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="link" action = "../jsp/employees.jsp">
+	<input type="submit" value="Go to google"/>
+
+</form>
+
+
+</body>
+</html>

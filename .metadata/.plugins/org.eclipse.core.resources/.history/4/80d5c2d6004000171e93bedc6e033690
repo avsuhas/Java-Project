@@ -1,0 +1,27 @@
+package com.samson.dao;
+
+import java.util.List;
+
+import com.samson.dbo.TitleDbo;
+
+public class TitleDao implements ITitleDao{
+
+	@Override
+	public List<TitleDbo> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TitleDbo findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(TitleDbo dbo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

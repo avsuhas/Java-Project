@@ -1,0 +1,9 @@
+#Tomcat publish data
+#Fri Jun 02 11:23:57 EDT 2017
+org.eclipse.jst.jee.server\:Employee\ Project=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/Employee Project
+org.eclipse.jst.jee.server\:PractiseServlet=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/PractiseServlet
+org.eclipse.jst.jee.server\:Trial2ServletProject=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/Trial2ServletProject
+org.eclipse.jst.jee.server\:JSP-Project=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/JSP-Project
+org.eclipse.jst.jee.server\:SimpleServletProject=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/SimpleServletProject
+org.eclipse.jst.jee.server\:JSP_JDBC_Project=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/JSP_JDBC_Project
+org.eclipse.jst.jee.server\:SakilaProject=/Users/suhasarudi/Downloads/apache-tomcat-7.0.77/wtpwebapps/SakilaProject

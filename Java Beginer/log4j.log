@@ -1,0 +1,5 @@
+[2017-05-30 18:32:06,772]DEBUG     0[main] - com.leetcode.TestLogger.main(TestLogger.java:10) - this is Debug
+[2017-05-30 18:32:11,789] INFO  5017[main] - com.leetcode.TestLogger.main(TestLogger.java:11) - this is info
+[2017-05-30 18:32:12,973] WARN  6201[main] - com.leetcode.TestLogger.main(TestLogger.java:12) - this is warning
+[2017-05-30 18:32:13,940]ERROR  7168[main] - com.leetcode.TestLogger.main(TestLogger.java:13) - this is error
+[2017-05-30 18:32:15,351]FATAL  8579[main] - com.leetcode.TestLogger.main(TestLogger.java:14) - this is fatal

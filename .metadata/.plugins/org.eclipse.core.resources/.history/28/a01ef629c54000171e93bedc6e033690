@@ -1,0 +1,11 @@
+package com.samson.service;
+
+import java.util.List;
+
+import com.samson.bo.DepartmentsBo;
+
+public interface IDepartments {
+	
+	public List<DepartmentsBo> findAll();
+
+}

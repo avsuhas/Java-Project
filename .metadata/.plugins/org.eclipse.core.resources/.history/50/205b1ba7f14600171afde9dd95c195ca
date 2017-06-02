@@ -1,0 +1,31 @@
+<%@ page import="com.samson.bo.AddEmployeeBo" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+String firstName = request.getParameter("firstName");
+String lastName = request.getParameter("lastName");
+String gender = request.getParameter("Sex");
+String birthDate = request.getParameter("calendar1");
+String hireDate = request.getParameter("calendar2");
+String deptNo = request.getParameter("departmentId");
+String startDate = request.getParameter("calendar3");
+
+%>
+
+<%= firstName %>
+<%= lastName %>
+<%= gender %>
+<%= birthDate %>
+<%= hireDate%>
+<%=  deptNo%>
+<%= startDate %>
+
+</body>
+</html>

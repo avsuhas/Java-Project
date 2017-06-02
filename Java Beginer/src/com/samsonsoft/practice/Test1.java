@@ -1,0 +1,7 @@
+package com.samsonsoft.practice;
+
+public class Test1 {
+	
+	
+
+}

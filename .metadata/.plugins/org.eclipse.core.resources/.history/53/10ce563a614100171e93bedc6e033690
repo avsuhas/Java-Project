@@ -1,0 +1,105 @@
+package com.samson.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.samson.bo.EmployeeInfoBo;
+import com.samson.bo.EmployeesBo;
+import com.samson.dao.DepartmentsDao;
+import com.samson.dao.DeptEmpDao;
+import com.samson.dao.EmployeesDao;
+import com.samson.dao.SalariesDao;
+import com.samson.dao.TitleDao;
+import com.samson.dbo.DepartmentsDbo;
+import com.samson.dbo.DeptEmpDbo;
+import com.samson.dbo.EmployeesDbo;
+import com.samson.dbo.SalariesDbo;
+import com.samson.dbo.TitleDbo;
+
+public class ServiceEmployees implements IServiceEmployees{
+
+	public static void main(String[] args) {
+		ServiceEmployees service = new ServiceEmployees();
+		service.findAllInfo();
+	}
+	public List<EmployeeInfoBo> findAllInfo(){
+		
+		List<EmployeeInfoBo> returnList = new ArrayList<EmployeeInfoBo>();
+		
+		int id=401809;
+		String deptId="";
+		String deptName = "";
+		int salary = 0;
+		String title = "";
+		
+		deptId = getDeptId(id);
+		
+		EmployeesDao dao = new EmployeesDao();
+		List<EmployeesDbo> employeesList = dao.findAll();
+		EmployeeInfoBo bo = null;
+		for(EmployeesDbo dbo : employeesList){
+			bo = new EmployeeInfoBo();
+			bo.setFirstName(dbo.getFirstName());
+			bo.setLastName(dbo.getLastName());
+			deptName = getDeptName(deptId);	
+			bo.setDepartment(deptName);
+			salary = getSalary(id);
+			bo.setSalary(salary);
+			title = getTitle(id);
+			bo.setTitle(title);
+			returnList.add(bo);
+		}
+		System.out.println(returnList);
+		return returnList;	
+	}
+	
+	@Override
+	public List<EmployeesBo> findAll() {
+
+		List<EmployeesBo> returnList = new ArrayList<EmployeesBo>();
+		
+		EmployeesBo bo = null;
+		EmployeesDao dao = new EmployeesDao();
+		List<EmployeesDbo> employeesDbo = dao.findAll();
+		for(EmployeesDbo dbo : employeesDbo){
+			bo = new EmployeesBo();
+			bo.setEmpNo(dbo.getEmpNo());
+			bo.setBirthDate(dbo.getBirthDate());
+			bo.setFirstName(dbo.getFirstName());
+			bo.setLastName(dbo.getLastName());
+			bo.setGender(dbo.getGender());
+			bo.setHireDate(dbo.getHireDate());
+			returnList.add(bo);
+		}
+		System.out.println(returnList);
+		return returnList;
+	}
+
+	public String getDeptId(int id){
+		DeptEmpDao dao = new DeptEmpDao();
+		DeptEmpDbo dbo = dao.findById(id);		
+		return  (dbo.getDeptNo());
+		
+	}
+	
+	public String getDeptName(String id){		
+		DepartmentsDao dao = new DepartmentsDao();
+		DepartmentsDbo dbo = dao.findById(id);		
+		return dbo.getDeptName();
+	}
+
+	public int getSalary(int id){		
+		SalariesDao dao = new SalariesDao();
+		SalariesDbo dbo = dao.findById(id);
+		return dbo.getSalary();
+	}
+
+	public String getTitle(int id){		
+		TitleDao dao = new TitleDao();
+		TitleDbo dbo =dao.findById(id);
+		return dbo.getTitle();		
+	}
+	
+	
+	
+}

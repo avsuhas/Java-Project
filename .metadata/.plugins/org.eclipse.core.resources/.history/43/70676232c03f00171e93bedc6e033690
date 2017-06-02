@@ -1,0 +1,29 @@
+package com.samson.dao;
+
+import java.util.List;
+
+import com.samson.dbo.DepartmentsDbo;
+
+public class DepartmentsDao implements IDepartmentsDao{
+
+	@Override
+	public List<DepartmentsDbo> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DepartmentsDbo findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(DepartmentsDbo dbo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+
+}

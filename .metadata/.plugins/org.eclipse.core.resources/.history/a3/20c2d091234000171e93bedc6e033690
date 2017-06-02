@@ -1,0 +1,51 @@
+package com.samson.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.samson.bo.EmployeesBo;
+import com.samson.dao.DepartmentsDao;
+import com.samson.dao.DeptEmpDao;
+import com.samson.dao.EmployeesDao;
+import com.samson.dbo.DepartmentsDbo;
+import com.samson.dbo.DeptEmpDbo;
+import com.samson.dbo.EmployeesDbo;
+
+public class ServiceEmployees implements IServiceEmployees{
+
+	@Override
+	public List<EmployeesBo> findAll() {
+
+		List<EmployeesBo> returnList = new ArrayList<EmployeesBo>();
+		EmployeesBo bo = null;
+		EmployeesDao dao = new EmployeesDao();
+		List<EmployeesDbo> employeesDbo = dao.findAll();
+		for(EmployeesDbo dbo : employeesDbo){
+			bo = new EmployeesBo();
+			bo.setEmpNo(dbo.getEmpNo());
+			bo.setBirthDate(dbo.getBirthDate());
+			bo.setFirstName(dbo.getFirstName());
+			bo.setLastName(dbo.getLastName());
+			bo.setGender(dbo.getGender());
+			bo.setHireDate(dbo.getHireDate());
+			returnList.add(bo);
+		}
+		
+		return returnList;
+	}
+
+	public String findDeptById(int id){
+		DeptEmpDao dao = new DeptEmpDao();
+		DeptEmpDbo dbo = dao.findById(id);
+		
+		return  Integer.toString(dbo.getDeptNo());
+		
+	}
+	
+	public String getDeptName(int id){
+		DepartmentsDao dao = new DepartmentsDao();
+		DepartmentsDbo dbo = dao.findById(id);
+		
+		return null;
+	}
+}

@@ -1,0 +1,13 @@
+package com.samson.bo;
+
+public class EmployeeInfoBo {
+	
+	int empNo;
+	String firstName;
+	String lastName;
+	String department;
+	String title;
+	int salary;
+	
+
+}

@@ -1,0 +1,27 @@
+package com.samson.dao;
+
+import java.util.List;
+
+import com.samson.dbo.UserDbo;
+
+public class UserDao implements IUserDao{
+
+	@Override
+	public List<UserDbo> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserDbo findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(UserDbo dbo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

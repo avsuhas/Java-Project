@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Testing</title>
+    <style type="text/css">
+    
+    
+    
+    
+    html, body {
+    	margin: 0px;
+    	background: #ebebeb;
+    }
+      .ulTag {
+      	list-style-type: none;
+      	background: #0E283C;
+      	margin: 0px;
+      }
+      
+      
+      .liTag {
+        display: inline-block;
+            padding: 15px 25px;
+            background: grey;
+            border-radius: 5px;
+            margin: 10px 0px 10px 0px;
+            text-align: right;
+        } 
+        .sbmtBtn {
+        	width: 90px;
+		    height: 35px;
+		    border-radius: 10px;
+		    font-size: 17px;
+		    margin-top: 20px;
+}
+        }
+        
+</style>
+  
+   
+</head>
+<body>
+
+	<div class="ulTag">
+	<ul>
+		<li class="liTag"> <a href="../jsp/employees.jsp" style="color:black;">Employees</a></li>		
+		<li class="liTag"><a href="../jsp/departments.jsp" style="color:black;">Departments</a></li>
+		<li class="liTag"><a href="../jsp/user.jsp" style="color:black;">Users</a></li>
+		<li class="liTag"><a href="welcomePage.html" style="color:black;">Login</a></li>
+	</ul>
+	</div>
+	
+	<div>
+	<ul>     
+	<li><input type="search"/></li>>
+	</ul>
+	</div>
+	
+	
+<br>
+
+
+
+</body>
+</html>

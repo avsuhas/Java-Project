@@ -1,0 +1,8 @@
+1495463880322	Rename type 'FilmActorBo2'
+1495463973246	Rename type 'FilmActorService2'
+1495463998556	Rename local variable 'actorMap'
+1495464012560	Rename local variable 'actorFilm'
+1495464036764	Rename local variable 'filmActorBo2'
+1495465817032	Rename local variable 'actorMap'
+1495466101376	Rename method 'actorMap'
+1495470260174	Rename resource 'filmList2.jsp'

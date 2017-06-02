@@ -1,0 +1,6 @@
+1494857478915	Rename local variable 'bo'
+1494859869325	Rename type 'InventoryBoClub'
+1494954266655	Rename type 'FilmText'
+1494957770074	Rename local variable 'aDbo'
+1494958015351	Rename local variable 'Dbo'
+1495046779080	Extract method 'filmActorMap'
